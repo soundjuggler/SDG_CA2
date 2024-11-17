@@ -29,6 +29,15 @@ public class Link1 extends javax.swing.JFrame {
         backgroundPNL = new javax.swing.JPanel();
         titleLBL = new javax.swing.JLabel();
         gobackBTN = new javax.swing.JButton();
+        label1LBL = new javax.swing.JLabel();
+        textfield1TF = new javax.swing.JTextField();
+        label2LBL = new javax.swing.JLabel();
+        textfield2TF = new javax.swing.JTextField();
+        button1BTN = new javax.swing.JButton();
+        button2BTN = new javax.swing.JButton();
+        text1LBL = new javax.swing.JLabel();
+        text2LBL = new javax.swing.JLabel();
+        scrollpaneSP = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,25 +56,98 @@ public class Link1 extends javax.swing.JFrame {
             }
         });
 
+        label1LBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        label1LBL.setForeground(new java.awt.Color(210, 231, 241));
+        label1LBL.setText("Species Name:");
+
+        textfield1TF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield1TFActionPerformed(evt);
+            }
+        });
+
+        label2LBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        label2LBL.setForeground(new java.awt.Color(210, 231, 241));
+        label2LBL.setText("Location:");
+
+        button1BTN.setText("Add");
+
+        button2BTN.setText("View All");
+
+        text1LBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        text1LBL.setForeground(new java.awt.Color(210, 231, 241));
+        text1LBL.setText("This application is designed to help users record ");
+
+        text2LBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        text2LBL.setForeground(new java.awt.Color(210, 231, 241));
+        text2LBL.setText("and track marine species observations in real-time.");
+
         javax.swing.GroupLayout backgroundPNLLayout = new javax.swing.GroupLayout(backgroundPNL);
         backgroundPNL.setLayout(backgroundPNLLayout);
         backgroundPNLLayout.setHorizontalGroup(
             backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPNLLayout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
-                .addComponent(gobackBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleLBL)
-                .addGap(18, 18, 18))
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(text1LBL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(label1LBL)
+                                            .addComponent(label2LBL))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(textfield1TF)
+                                            .addComponent(textfield2TF, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)))
+                                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                        .addComponent(button1BTN)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(button2BTN))
+                                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                        .addComponent(gobackBTN)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(titleLBL))))
+                            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(scrollpaneSP, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(text2LBL))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         backgroundPNLLayout.setVerticalGroup(
             backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundPNLLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titleLBL)
-                    .addComponent(gobackBTN))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(gobackBTN)
+                    .addComponent(titleLBL))
+                .addGap(33, 33, 33)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label1LBL)
+                    .addComponent(textfield1TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label2LBL)
+                    .addComponent(textfield2TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button1BTN)
+                    .addComponent(button2BTN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(text1LBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(text2LBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrollpaneSP, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -90,6 +172,10 @@ public class Link1 extends javax.swing.JFrame {
         //this.setDefaultCloseOperation(MainAppGUI.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_gobackBTNActionPerformed
+
+    private void textfield1TFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield1TFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield1TFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,7 +214,16 @@ public class Link1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel backgroundPNL;
+    private javax.swing.JButton button1BTN;
+    private javax.swing.JButton button2BTN;
     private javax.swing.JButton gobackBTN;
+    private javax.swing.JLabel label1LBL;
+    private javax.swing.JLabel label2LBL;
+    private javax.swing.JScrollPane scrollpaneSP;
+    private javax.swing.JLabel text1LBL;
+    private javax.swing.JLabel text2LBL;
+    private javax.swing.JTextField textfield1TF;
+    private javax.swing.JTextField textfield2TF;
     private javax.swing.JLabel titleLBL;
     // End of variables declaration//GEN-END:variables
 }
