@@ -40,6 +40,8 @@ public class Link1 extends javax.swing.JFrame {
         scrollpaneSP = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Marine Species Tracker | Cian");
+        setResizable(false);
 
         backgroundPNL.setBackground(new java.awt.Color(0, 124, 186));
 
@@ -70,8 +72,17 @@ public class Link1 extends javax.swing.JFrame {
         label2LBL.setForeground(new java.awt.Color(210, 231, 241));
         label2LBL.setText("Location:");
 
+        button1BTN.setBackground(new java.awt.Color(210, 231, 241));
+        button1BTN.setForeground(new java.awt.Color(148, 196, 228));
         button1BTN.setText("Add");
+        button1BTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1BTNActionPerformed(evt);
+            }
+        });
 
+        button2BTN.setBackground(new java.awt.Color(210, 231, 241));
+        button2BTN.setForeground(new java.awt.Color(148, 196, 228));
         button2BTN.setText("View All");
 
         text1LBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -162,6 +173,7 @@ public class Link1 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void gobackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gobackBTNActionPerformed
@@ -176,6 +188,10 @@ public class Link1 extends javax.swing.JFrame {
     private void textfield1TFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield1TFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield1TFActionPerformed
+
+    private void button1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1BTNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button1BTNActionPerformed
 
     /**
      * @param args the command line arguments

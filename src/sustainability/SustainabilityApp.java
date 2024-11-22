@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package sustainability;
-
+    
 /**
  *
  * @author dell
@@ -16,7 +16,8 @@ public class SustainabilityApp {
     public static void main(String[] args) {
         // TODO code application logic here
         LandingPageGUI myGUI = new LandingPageGUI();
-        myGUI.setVisible(true);
+        myGUI.setVisible(true); //shows window
+
     }
     
 }

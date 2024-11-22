@@ -29,14 +29,35 @@ public class Link3 extends javax.swing.JFrame {
         backgroundPNL = new javax.swing.JPanel();
         titleLBL = new javax.swing.JLabel();
         gobackBTN = new javax.swing.JButton();
+        turtlesAffectedLBL = new javax.swing.JLabel();
+        dolphinsAffectedLBL = new javax.swing.JLabel();
+        damageCostsLBL = new javax.swing.JLabel();
+        locationLBL = new javax.swing.JLabel();
+        amountDumpedLBL = new javax.swing.JLabel();
+        typeOfDebrisLBL = new javax.swing.JLabel();
+        cleanUpPartnerLBL = new javax.swing.JLabel();
+        turtlesAffectedTF = new javax.swing.JTextField();
+        dolphinsAffectedTF = new javax.swing.JTextField();
+        damageCostsTF = new javax.swing.JTextField();
+        locationTF = new javax.swing.JTextField();
+        amountDumpedTF = new javax.swing.JTextField();
+        typeOfDebrisTF = new javax.swing.JTextField();
+        celanUpPartnerTF = new javax.swing.JTextField();
+        addBTN = new javax.swing.JButton();
+        viewBTN = new javax.swing.JButton();
+        deleteBTN = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        wastedPlasticTA = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Wasted Plastic Page | Tom");
+        setResizable(false);
 
         backgroundPNL.setBackground(new java.awt.Color(0, 124, 186));
 
         titleLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         titleLBL.setForeground(new java.awt.Color(210, 231, 241));
-        titleLBL.setText("Ocean Knowledge Quiz");
+        titleLBL.setText("Wasted Plastic Page");
 
         gobackBTN.setBackground(new java.awt.Color(210, 231, 241));
         gobackBTN.setForeground(new java.awt.Color(148, 196, 228));
@@ -47,25 +68,165 @@ public class Link3 extends javax.swing.JFrame {
             }
         });
 
+        turtlesAffectedLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        turtlesAffectedLBL.setForeground(new java.awt.Color(210, 231, 241));
+        turtlesAffectedLBL.setText("Turtles Affected");
+
+        dolphinsAffectedLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dolphinsAffectedLBL.setForeground(new java.awt.Color(210, 231, 241));
+        dolphinsAffectedLBL.setText("Dolphins Affected");
+
+        damageCostsLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        damageCostsLBL.setForeground(new java.awt.Color(210, 231, 241));
+        damageCostsLBL.setText("Damage Costs");
+
+        locationLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        locationLBL.setForeground(new java.awt.Color(210, 231, 241));
+        locationLBL.setText("Location");
+
+        amountDumpedLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        amountDumpedLBL.setForeground(new java.awt.Color(210, 231, 241));
+        amountDumpedLBL.setText("Amount Dumped");
+
+        typeOfDebrisLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        typeOfDebrisLBL.setForeground(new java.awt.Color(210, 231, 241));
+        typeOfDebrisLBL.setText("Type of Debris");
+
+        cleanUpPartnerLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cleanUpPartnerLBL.setForeground(new java.awt.Color(210, 231, 241));
+        cleanUpPartnerLBL.setText("Clean Up Partner");
+
+        turtlesAffectedTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                turtlesAffectedTFActionPerformed(evt);
+            }
+        });
+
+        dolphinsAffectedTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dolphinsAffectedTFActionPerformed(evt);
+            }
+        });
+
+        damageCostsTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                damageCostsTFActionPerformed(evt);
+            }
+        });
+
+        amountDumpedTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                amountDumpedTFActionPerformed(evt);
+            }
+        });
+
+        celanUpPartnerTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                celanUpPartnerTFActionPerformed(evt);
+            }
+        });
+
+        addBTN.setBackground(new java.awt.Color(210, 231, 241));
+        addBTN.setForeground(new java.awt.Color(148, 196, 228));
+        addBTN.setText("Add");
+
+        viewBTN.setBackground(new java.awt.Color(210, 231, 241));
+        viewBTN.setForeground(new java.awt.Color(148, 196, 228));
+        viewBTN.setText("View");
+
+        deleteBTN.setBackground(new java.awt.Color(210, 231, 241));
+        deleteBTN.setForeground(new java.awt.Color(148, 196, 228));
+        deleteBTN.setText("Delete");
+
+        wastedPlasticTA.setColumns(20);
+        wastedPlasticTA.setRows(5);
+        jScrollPane1.setViewportView(wastedPlasticTA);
+
         javax.swing.GroupLayout backgroundPNLLayout = new javax.swing.GroupLayout(backgroundPNL);
         backgroundPNL.setLayout(backgroundPNLLayout);
         backgroundPNLLayout.setHorizontalGroup(
             backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPNLLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(gobackBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleLBL)
-                .addContainerGap(12, Short.MAX_VALUE))
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(dolphinsAffectedLBL)
+                            .addComponent(turtlesAffectedLBL)
+                            .addComponent(damageCostsLBL)
+                            .addComponent(locationLBL)
+                            .addComponent(amountDumpedLBL)
+                            .addComponent(typeOfDebrisLBL)
+                            .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(addBTN)
+                                .addComponent(cleanUpPartnerLBL)))
+                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                .addGap(83, 83, 83)
+                                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(celanUpPartnerTF, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(typeOfDebrisTF)
+                                    .addComponent(amountDumpedTF)
+                                    .addComponent(locationTF)
+                                    .addComponent(damageCostsTF)
+                                    .addComponent(dolphinsAffectedTF)
+                                    .addComponent(turtlesAffectedTF)))
+                            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(viewBTN)
+                                .addGap(45, 45, 45)
+                                .addComponent(deleteBTN))))
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addComponent(gobackBTN)
+                        .addGap(18, 18, 18)
+                        .addComponent(titleLBL)
+                        .addGap(80, 80, 80)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         backgroundPNLLayout.setVerticalGroup(
             backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundPNLLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(20, 20, 20)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(gobackBTN)
+                    .addComponent(titleLBL))
+                .addGap(25, 25, 25)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(turtlesAffectedLBL)
+                    .addComponent(turtlesAffectedTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titleLBL)
-                    .addComponent(gobackBTN))
-                .addContainerGap(351, Short.MAX_VALUE))
+                    .addComponent(dolphinsAffectedLBL)
+                    .addComponent(dolphinsAffectedTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(damageCostsLBL)
+                    .addComponent(damageCostsTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(locationLBL)
+                    .addComponent(locationTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(amountDumpedLBL)
+                    .addComponent(amountDumpedTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(typeOfDebrisLBL)
+                    .addComponent(typeOfDebrisTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cleanUpPartnerLBL)
+                    .addComponent(celanUpPartnerTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addBTN)
+                    .addComponent(viewBTN)
+                    .addComponent(deleteBTN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -80,6 +241,7 @@ public class Link3 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void gobackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gobackBTNActionPerformed
@@ -90,6 +252,26 @@ public class Link3 extends javax.swing.JFrame {
         //this.setDefaultCloseOperation(MainAppGUI.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_gobackBTNActionPerformed
+
+    private void damageCostsTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_damageCostsTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_damageCostsTFActionPerformed
+
+    private void turtlesAffectedTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turtlesAffectedTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_turtlesAffectedTFActionPerformed
+
+    private void dolphinsAffectedTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dolphinsAffectedTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dolphinsAffectedTFActionPerformed
+
+    private void amountDumpedTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amountDumpedTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_amountDumpedTFActionPerformed
+
+    private void celanUpPartnerTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celanUpPartnerTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_celanUpPartnerTFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,8 +309,27 @@ public class Link3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addBTN;
+    private javax.swing.JLabel amountDumpedLBL;
+    private javax.swing.JTextField amountDumpedTF;
     private javax.swing.JPanel backgroundPNL;
+    private javax.swing.JTextField celanUpPartnerTF;
+    private javax.swing.JLabel cleanUpPartnerLBL;
+    private javax.swing.JLabel damageCostsLBL;
+    private javax.swing.JTextField damageCostsTF;
+    private javax.swing.JButton deleteBTN;
+    private javax.swing.JLabel dolphinsAffectedLBL;
+    private javax.swing.JTextField dolphinsAffectedTF;
     private javax.swing.JButton gobackBTN;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel locationLBL;
+    private javax.swing.JTextField locationTF;
     private javax.swing.JLabel titleLBL;
+    private javax.swing.JLabel turtlesAffectedLBL;
+    private javax.swing.JTextField turtlesAffectedTF;
+    private javax.swing.JLabel typeOfDebrisLBL;
+    private javax.swing.JTextField typeOfDebrisTF;
+    private javax.swing.JButton viewBTN;
+    private javax.swing.JTextArea wastedPlasticTA;
     // End of variables declaration//GEN-END:variables
 }

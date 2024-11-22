@@ -35,6 +35,8 @@ public class LandingPageGUI extends javax.swing.JFrame {
         exitBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Landing Page");
+        setResizable(false);
 
         backgroundPNL.setBackground(new java.awt.Color(0, 124, 186));
 
@@ -62,7 +64,7 @@ public class LandingPageGUI extends javax.swing.JFrame {
 
         button3BTN.setBackground(new java.awt.Color(210, 231, 241));
         button3BTN.setForeground(new java.awt.Color(148, 196, 228));
-        button3BTN.setText("Ocean Knowledge Quiz");
+        button3BTN.setText("Wasted Plastic Page");
         button3BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button3BTNActionPerformed(evt);
@@ -98,7 +100,7 @@ public class LandingPageGUI extends javax.swing.JFrame {
                     .addComponent(button3BTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(button2BTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(button1BTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPNLLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titleLBL)
@@ -134,6 +136,7 @@ public class LandingPageGUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void button1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1BTNActionPerformed

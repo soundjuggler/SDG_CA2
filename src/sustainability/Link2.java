@@ -42,6 +42,8 @@ public class Link2 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ocean Cleanup Info | Harry");
+        setResizable(false);
 
         backgroundLBL.setBackground(new java.awt.Color(0, 124, 186));
 
@@ -110,13 +112,10 @@ public class Link2 extends javax.swing.JFrame {
                                 .addComponent(textfield3TF, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                                 .addComponent(textfield2TF)
                                 .addGroup(backgroundLBLLayout.createSequentialGroup()
-                                    .addGroup(backgroundLBLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(backgroundLBLLayout.createSequentialGroup()
-                                            .addGap(2, 2, 2)
-                                            .addComponent(label1LBL))
-                                        .addComponent(Labe2LBL)
-                                        .addComponent(label4LBL))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addGap(2, 2, 2)
+                                    .addComponent(label1LBL))
+                                .addComponent(Labe2LBL)
+                                .addComponent(label4LBL))
                             .addComponent(textfield1TF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(backgroundLBLLayout.createSequentialGroup()
                         .addContainerGap()
@@ -173,6 +172,7 @@ public class Link2 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void gobackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gobackBTNActionPerformed
