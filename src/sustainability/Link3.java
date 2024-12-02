@@ -42,7 +42,7 @@ public class Link3 extends javax.swing.JFrame {
         locationTF = new javax.swing.JTextField();
         amountDumpedTF = new javax.swing.JTextField();
         typeOfDebrisTF = new javax.swing.JTextField();
-        celanUpPartnerTF = new javax.swing.JTextField();
+        cleanUpPartnerTF = new javax.swing.JTextField();
         addBTN = new javax.swing.JButton();
         viewBTN = new javax.swing.JButton();
         deleteBTN = new javax.swing.JButton();
@@ -120,23 +120,38 @@ public class Link3 extends javax.swing.JFrame {
             }
         });
 
-        celanUpPartnerTF.addActionListener(new java.awt.event.ActionListener() {
+        cleanUpPartnerTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                celanUpPartnerTFActionPerformed(evt);
+                cleanUpPartnerTFActionPerformed(evt);
             }
         });
 
         addBTN.setBackground(new java.awt.Color(210, 231, 241));
         addBTN.setForeground(new java.awt.Color(148, 196, 228));
         addBTN.setText("Add");
+        addBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBTNActionPerformed(evt);
+            }
+        });
 
         viewBTN.setBackground(new java.awt.Color(210, 231, 241));
         viewBTN.setForeground(new java.awt.Color(148, 196, 228));
         viewBTN.setText("View");
+        viewBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewBTNActionPerformed(evt);
+            }
+        });
 
         deleteBTN.setBackground(new java.awt.Color(210, 231, 241));
         deleteBTN.setForeground(new java.awt.Color(148, 196, 228));
         deleteBTN.setText("Delete");
+        deleteBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBTNActionPerformed(evt);
+            }
+        });
 
         wastedPlasticTA.setColumns(20);
         wastedPlasticTA.setRows(5);
@@ -165,7 +180,7 @@ public class Link3 extends javax.swing.JFrame {
                             .addGroup(backgroundPNLLayout.createSequentialGroup()
                                 .addGap(83, 83, 83)
                                 .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(celanUpPartnerTF, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(cleanUpPartnerTF, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                     .addComponent(typeOfDebrisTF)
                                     .addComponent(amountDumpedTF)
                                     .addComponent(locationTF)
@@ -218,7 +233,7 @@ public class Link3 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cleanUpPartnerLBL)
-                    .addComponent(celanUpPartnerTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cleanUpPartnerTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addBTN)
@@ -269,9 +284,21 @@ public class Link3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_amountDumpedTFActionPerformed
 
-    private void celanUpPartnerTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celanUpPartnerTFActionPerformed
+    private void cleanUpPartnerTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanUpPartnerTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_celanUpPartnerTFActionPerformed
+    }//GEN-LAST:event_cleanUpPartnerTFActionPerformed
+
+    private void addBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBTNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addBTNActionPerformed
+
+    private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewBTNActionPerformed
+
+    private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,8 +340,8 @@ public class Link3 extends javax.swing.JFrame {
     private javax.swing.JLabel amountDumpedLBL;
     private javax.swing.JTextField amountDumpedTF;
     private javax.swing.JPanel backgroundPNL;
-    private javax.swing.JTextField celanUpPartnerTF;
     private javax.swing.JLabel cleanUpPartnerLBL;
+    private javax.swing.JTextField cleanUpPartnerTF;
     private javax.swing.JLabel damageCostsLBL;
     private javax.swing.JTextField damageCostsTF;
     private javax.swing.JButton deleteBTN;
