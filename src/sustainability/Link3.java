@@ -293,20 +293,7 @@ public class Link3 extends javax.swing.JFrame {
 
     private void addBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBTNActionPerformed
         // TODO add your handling code here:
-        int turtlesAffected = Integer.parseInt(turtlesAffectedTF.getText());
-        int dolphinsAffected = Integer.parseInt(dolphinsAffectedTF.getText());
-        int damageCosts = Integer.parseInt(damageCostsTF.getText());
-        String location = locationTF.getText();
-        int amountDumped = Integer.parseInt(amountDumpedTF.getText());
-        String typeOfDebris = typeOfDebrisTF.getText();
-        String cleanUpPartner = cleanUpPartnerTF.getText();
         
-        Link3 wastedPlastic = new Link3(amountDumped, typeOfDebris, cleanUpPartner, turtlesAffected, dolphinsAffected, damageCosts, location);
-        
-        //add the object to the list
-        plist.add(wastedPlastic);
-        
-        wastedPlasticTA.append(wastedPlastic.toString() + "\n");
     }//GEN-LAST:event_addBTNActionPerformed
 
     private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
@@ -367,7 +354,7 @@ public class Link3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Link3(amountDumped, typeOfDebris, cleanUpPartner, turtlesAffected, dolphinsAffected, damageCosts).setVisible(true);
+                new Link3().setVisible(true);
             }
         });
     }
