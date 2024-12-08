@@ -4,12 +4,15 @@
  */
 package sustainability;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dell
  */
 public class Link3 extends javax.swing.JFrame {
-
+    ArrayList <Link3> plist = new ArrayList<>();
     /**
      * Creates new form Link3
      */
@@ -290,14 +293,48 @@ public class Link3 extends javax.swing.JFrame {
 
     private void addBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBTNActionPerformed
         // TODO add your handling code here:
+        int turtlesAffected = Integer.parseInt(turtlesAffectedTF.getText());
+        int dolphinsAffected = Integer.parseInt(dolphinsAffectedTF.getText());
+        int damageCosts = Integer.parseInt(damageCostsTF.getText());
+        String location = locationTF.getText();
+        int amountDumped = Integer.parseInt(amountDumpedTF.getText());
+        String typeOfDebris = typeOfDebrisTF.getText();
+        String cleanUpPartner = cleanUpPartnerTF.getText();
+        
+        Link3 wastedPlastic = new Link3(amountDumped, typeOfDebris, cleanUpPartner, turtlesAffected, dolphinsAffected, damageCosts, location);
+        
+        //add the object to the list
+        plist.add(wastedPlastic);
+        
+        wastedPlasticTA.append(wastedPlastic.toString() + "\n");
     }//GEN-LAST:event_addBTNActionPerformed
 
     private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
         // TODO add your handling code here:
+        wastedPlasticTA.setText(""); // Clear the text area before appending new content
+        if (plist.isEmpty()) {
+            wastedPlasticTA.append("No data to display.\n");
+        } else {
+            for (Link3 wastedPlastic : plist) {
+                wastedPlasticTA.append(wastedPlastic.toString() + "\n\n"); // Assuming WastedPlastic class has a toString() method
+            }
+        }
     }//GEN-LAST:event_viewBTNActionPerformed
 
     private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
         // TODO add your handling code here:
+        if(plist.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Nothing in system");
+        } else {
+            String searchTerm = JOptionPane.showInputDialog(null, "Enter name");
+            for(int i = 0; i < plist.size(); i++) {
+                Link3 temp = plist.get(i);
+                if(temp.getCleanUpPartner(searchTerm)){
+                    plist.remove(i);
+                    JOptionPane.showMessageDialog(null, "It's gone now");
+                }
+            }
+        }
     }//GEN-LAST:event_deleteBTNActionPerformed
 
     /**
@@ -330,7 +367,7 @@ public class Link3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Link3().setVisible(true);
+                new Link3(amountDumped, typeOfDebris, cleanUpPartner, turtlesAffected, dolphinsAffected, damageCosts).setVisible(true);
             }
         });
     }
@@ -359,4 +396,12 @@ public class Link3 extends javax.swing.JFrame {
     private javax.swing.JButton viewBTN;
     private javax.swing.JTextArea wastedPlasticTA;
     // End of variables declaration//GEN-END:variables
+
+    private Object getCleanUpPartner() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private boolean getCleanUpPartner(String searchTerm) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
