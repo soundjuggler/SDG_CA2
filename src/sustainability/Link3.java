@@ -13,12 +13,15 @@ import javax.swing.JOptionPane;
  */
 public class Link3 extends javax.swing.JFrame {
     ArrayList <Link3> plist = new ArrayList<>();
+    
     /**
      * Creates new form Link3
      */
     public Link3() {
         initComponents();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -300,11 +303,14 @@ public class Link3 extends javax.swing.JFrame {
         int amountDumped = Integer.parseInt(amountDumpedTF.getText());
         String typeOfDebris = typeOfDebrisTF.getText();
         String cleanUpPartner = cleanUpPartnerTF.getText();
-        
-        Link3 wastedPlastic = new Link3(amountDumped, typeOfDebris, cleanUpPartner, turtlesAffected, dolphinsAffected, damageCosts, location);
-        
-        //add the object to the list
+
+        // Create a new WastedPlastic object
+        //WastedPlastic wastedPlastic = new WastedPlastic(turtlesAffected, dolphinsAffected, damageCosts, location, amountDumped, typeOfDebris, cleanUpPartner);
+        Link3 wastedPlastic = new Link3();
+        // Add the object to the list
         plist.add(wastedPlastic);
+            
+        wastedPlasticTA.append(wastedPlastic.toString() + "\n");
     }//GEN-LAST:event_addBTNActionPerformed
 
     private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
@@ -327,7 +333,7 @@ public class Link3 extends javax.swing.JFrame {
             String searchTerm = JOptionPane.showInputDialog(null, "Enter name");
             for(int i = 0; i < plist.size(); i++) {
                 Link3 temp = plist.get(i);
-                if(temp.getCleanUpPartner(searchTerm)){
+                if(temp.getCleanUpPartner(searchTerm){
                     plist.remove(i);
                     JOptionPane.showMessageDialog(null, "It's gone now");
                 }
@@ -394,11 +400,6 @@ public class Link3 extends javax.swing.JFrame {
     private javax.swing.JButton viewBTN;
     private javax.swing.JTextArea wastedPlasticTA;
     // End of variables declaration//GEN-END:variables
-
-    private Object getCleanUpPartner() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     private boolean getCleanUpPartner(String searchTerm) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
