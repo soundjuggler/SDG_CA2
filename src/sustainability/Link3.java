@@ -333,7 +333,7 @@ public class Link3 extends javax.swing.JFrame {
             String searchTerm = JOptionPane.showInputDialog(null, "Enter name");
             for(int i = 0; i < plist.size(); i++) {
                 Link3 temp = plist.get(i);
-                if(temp.getCleanUpPartner(searchTerm){
+                if(temp.getCleanUpPartner(searchTerm)){
                     plist.remove(i);
                     JOptionPane.showMessageDialog(null, "It's gone now");
                 }
